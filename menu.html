@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Feane Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Feane</div>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle">☰</button>
+  </header>
+
+  <section class="menu-preview">
+    <h2>Our Full Menu</h2>
+    <table class="menu-table">
+      <tr><th>Dish</th><th>Description</th><th>Price</th></tr>
+      <tr><td>Cheese Burger</td><td>Juicy beef patty with melted cheese</td><td>$8.99</td></tr>
+      <tr><td>French Fries</td><td>Crispy golden fries</td><td>$3.99</td></tr>
+      <tr><td>Pepperoni Pizza</td><td>Cheesy and loaded with pepperoni</td><td>$12.99</td></tr>
+      <tr><td>Chicken Wings</td><td>Spicy and crispy wings</td><td>$9.99</td></tr>
+      <tr><td>Veggie Wrap</td><td>Fresh veggies wrapped in pita bread</td><td>$7.49</td></tr>
+    </table>
+  </section>
+
+  <footer>
+    <p>© 2025 Feane Restaurant</p>
+  </footer>
+
+  <script>
+    document.querySelector(".menu-toggle").addEventListener("click", () => {
+      document.querySelector("#navbar ul").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feane Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Feane</div>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle">☰</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Fast Food Restaurant</h1>
+      <p>Delicious burgers, fries, and more made fresh for you every day.</p>
+      <a href="menu.html" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- Menu Preview -->
+  <section class="menu-preview">
+    <h2>Our Popular Dishes</h2>
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="images/burger.jpg" alt="Burger">
+        <h3>Cheese Burger</h3>
+        <p>Juicy beef patty with melted cheese</p>
+        <span>$8.99</span>
+      </div>
+      <div class="menu-card">
+        <img src="images/fries.jpg" alt="Fries">
+        <h3>French Fries</h3>
+        <p>Crispy golden fries</p>
+        <span>$3.99</span>
+      </div>
+      <div class="menu-card">
+        <img src="images/pizza.jpg" alt="Pizza">
+        <h3>Pepperoni Pizza</h3>
+        <p>Cheesy and loaded with pepperoni</p>
+        <span>$12.99</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Since 420 BC, Feane Restaurant has been serving delicious meals made with love and fresh ingredients. Our mission is simple: make food that makes people happy.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-preview">
+    <h2>Contact Us</h2>
+    <p>Email: info@feane.com | Phone: (123) 456-7890</p>
+    <br>
+    <a href="contact.html" class="btn">Get in Touch</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Feane Restaurant</p>
+    <p>Follow us:
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a>
+    </p>
+    <p>Open Hours: Mon–Sun, 10am – 11pm</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("#navbar ul");
+    toggleBtn.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
