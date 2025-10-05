@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gallery - Feane Restaurant</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
   <header>
@@ -23,13 +26,22 @@
 
   <section class="gallery">
     <h2>Our Gallery</h2>
-    <div class="gallery-slider">
-      <img src="images/burger.jpg" alt="Burger">
-      <img src="images/fries.jpg" alt="Fries">
-      <img src="images/pizza.jpg" alt="Pizza">
-      <img src="images/wings.jpg" alt="Wings">
-      <img src="images/wrap.jpg" alt="Veggie Wrap">
-      <img src="images/interior.jpg" alt="Restaurant Interior">
+    <div class="swiper gallery-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/burger.jpg" alt="Burger" /></div>
+        <div class="swiper-slide"><img src="images/fries.jpg" alt="Fries" /></div>
+        <div class="swiper-slide"><img src="images/nuggets.jpg" alt="Nuggets" /></div>
+        <div class="swiper-slide"><img src="images/wings.jpg" alt="Wings" /></div>
+        <div class="swiper-slide"><img src="images/wraps.jpg" alt="Veggie Wrap" /></div>
+        <div class="swiper-slide"><img src="images/pizza.jpg" alt="Pizza" /></div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination dots -->
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 
@@ -37,9 +49,36 @@
     <p>© 2025 Feane Restaurant</p>
   </footer>
 
+  <!-- Menu toggle script -->
   <script>
     document.querySelector(".menu-toggle").addEventListener("click", () => {
       document.querySelector("#navbar ul").classList.toggle("show");
+    });
+  </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.gallery-slider', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      }
     });
   </script>
 </body>

@@ -17,8 +17,18 @@ header {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+
+.logo-img {
+  height: 40px; /* adjust size as needed */
+  width: auto;
 }
 
 nav ul {
@@ -54,28 +64,34 @@ nav ul li a:hover {
   height: 80vh;
   background: url("images/banner.jpg") no-repeat center center/cover;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  text-align: center;
   color: white;
+  padding-left: 40px;
+}
+
+.hero-text {
+  max-width: 500px;
+  text-align: left;
 }
 
 .hero-text h1 {
-  font-size: 48px;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
 .hero-text p {
-  font-size: 18px;
+  font-size: 1.25rem;
   margin-bottom: 20px;
 }
 
 .btn {
   background: orange;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
 /* Menu Preview */
@@ -93,14 +109,39 @@ nav ul li a:hover {
 
 .menu-card {
   background: #f9f9f9;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.menu-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.menu-card .price {
+  font-weight: bold;
+  color: orange;
+  font-size: 1.1rem;
 }
 
 .menu-card img {
   width: 100%;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 /* About Section */
@@ -122,6 +163,23 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Gallery Slider */
+.gallery-slider {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 /* Mobile Styles */
@@ -149,7 +207,26 @@ footer {
     align-items: center;
   }
 
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .hero-text h1 {
-    font-size: 32px;
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .menu-card {
+    width: 90%;
   }
 }
+
