@@ -25,9 +25,8 @@ header {
   color: white;
 }
 
-
 .logo-img {
-  height: 40px; /* adjust size as needed */
+  height: 40px;
   width: auto;
 }
 
@@ -92,19 +91,28 @@ nav ul li a:hover {
   text-decoration: none;
   border-radius: 5px;
   font-size: 1rem;
+  border: none;
+  cursor: pointer;
 }
 
-/* Menu Preview */
+.btn:hover {
+  background: darkorange;
+}
+
+/* Menu and Cart Layout */
 .menu-preview {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
   padding: 50px 20px;
-  text-align: center;
 }
 
 .menu-items {
+  flex: 2;
   display: flex;
-  justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .menu-card {
@@ -142,6 +150,61 @@ nav ul li a:hover {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+/* Cart Section */
+.cart-section {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.cart-section h2 {
+  margin-bottom: 15px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.cart-item button {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.cart-item button:hover {
+  background: darkorange;
+}
+
+#clear-cart {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+#clear-cart:hover {
+  background: darkorange;
 }
 
 /* About Section */
@@ -202,6 +265,10 @@ footer {
     display: block;
   }
 
+  .menu-preview {
+    flex-direction: column;
+  }
+
   .menu-items {
     flex-direction: column;
     align-items: center;
@@ -228,5 +295,10 @@ footer {
   .menu-card {
     width: 90%;
   }
-}
 
+  .cart-section {
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+  }
+}

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -5,14 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
+<body>
   <!-- Header -->
   <header>
-  <div class="logo">
-    <img src="images/logo.png" alt="Burgerz Logo" class="logo-img">
-    <span>Burgerz</span>
-  </div>
-
+    <div class="logo">
+      <img src="images/logo.png" alt="Burgerz Logo" class="logo-img">
+      <span>Burgerz</span>
+    </div>
     <nav id="navbar">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
@@ -83,13 +84,6 @@
     <p>Open Hours: Mon–Sun, 10am – 11pm</p>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const toggleBtn = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("#navbar ul");
-    toggleBtn.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
